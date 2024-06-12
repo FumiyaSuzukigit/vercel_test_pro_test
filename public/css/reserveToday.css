@@ -1,0 +1,47 @@
+.main {
+    max-width: 1210px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main__search{
+    width: 100%;
+    margin: 50px auto;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:first-child{
+    border-bottom: 1px solid black;
+}
+
+.responsive{
+    display: none;
+}
+
+@media screen and (max-width : 768px) {
+    .responsive {
+        display: block;
+        text-align: center;
+    }
+
+    .default {
+        display: none;
+    }
+
+    .main__search--table-responsive{
+        border-bottom: 1px solid black;
+    }
+
+    .main__search--table-responsive:last-child{
+        border-bottom: none;
+    }
+
+}
+
+
+

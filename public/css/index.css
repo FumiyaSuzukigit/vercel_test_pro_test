@@ -1,0 +1,450 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+button{
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search{
+  max-width: 1500px;
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+}
+
+.sorting-area {
+  padding: 5px;
+  margin: 0 auto;
+  width: 20%;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 4px;
+}
+
+.sorting-area select {
+  border: none;
+  height: 30px;
+  width: 100%;
+  outline: none;
+}
+
+.search-area{
+  padding: 5px;
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 4px;
+}
+
+.search-area input{
+  border: none;
+  height: 30px;
+  width: 40%;
+  outline: none;
+}
+
+.search-area select {
+  border: none;
+  height: 30px;
+  width: 50%;
+  outline: none;
+}
+
+.responsive-search{
+  width: 100%;
+}
+
+.responsive-search-sorting{
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+#category{
+  border-right: 1px solid gainsboro;
+  width: 20%;
+}
+
+#area {
+  border-right: 1px solid gainsboro;
+  width: 20%;
+}
+
+.flex__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 100px auto;
+}
+
+
+.shop-wrap {
+  margin: 20px auto;
+  justify-content: space-around;
+}
+
+.shop-wrap__item {
+  width: 300px;
+  margin:10px;
+  display: block;
+  box-shadow: 10px 10px 15px -10px;
+  border-radius:15px;
+}
+
+.shop-wrap__item-content {
+  background: #fff;
+  border-radius: 0 0 15px 15px;
+  padding: 20px;
+}
+
+.name-score{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-wrap__item-bottom{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-wrap__item-eyecatch {
+  border-radius: 15px 15px 0 0;
+  height: 200px;
+}
+
+.shop-wrap__item-content-tag {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline;
+}
+
+.heart{
+    width: 40px;
+    height: auto;
+  }
+
+.detail{
+  text-decoration: none;
+  padding:10px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+.none{
+  display: none;
+}
+
+.responsive{
+  display: none;
+}
+
+@media screen and (max-width : 768px) {
+  .default{
+      display: none;
+  }
+
+  .responsive{
+    display:block;
+  }
+
+  .search-area input {
+    width: 100%;
+    border: 1px solid black;
+    height: 30px;
+  }
+
+  .search-area select {
+    width: 100%;
+    border: 1px solid black;
+    height: 30px;
+  }
+
+  #category {
+    width: 100%;
+  }
+
+  #area {
+    width: 100%;
+  }
+
+  .shop-wrap {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .shop-wrap__item{
+    margin: 20px auto;
+  }
+}
+
+.rate-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rate-form input[type=radio] {
+  display: none;
+}
+
+.rate-form label {
+  position: relative;
+  padding: 0 5px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.rate-form label:hover {
+  color: #ffcc00;
+}
+
+.rate-form label:hover~label {
+  color: #ffcc00;
+}
+
+.rate-form input[type=radio]:checked~label {
+  color: #ffcc00;
+}
+
+.star5_rating {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #CCCCCC;
+  /* グレーカラー 自由に設定化 */
+  /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before,
+.star5_rating:after {
+  content: '★★★★★';
+}
+
+.star5_rating:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: blue;
+  /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after {
+  width: 100%;
+}
+
+.star5_rating[data-rate="4.9"]:after {
+  width: 98%;
+}
+
+.star5_rating[data-rate="4.8"]:after {
+  width: 96%;
+}
+
+.star5_rating[data-rate="4.7"]:after {
+  width: 94%;
+}
+
+.star5_rating[data-rate="4.6"]:after {
+  width: 92%;
+}
+
+.star5_rating[data-rate="4.5"]:after {
+  width: 90%;
+}
+
+.star5_rating[data-rate="4.4"]:after {
+  width: 88%;
+}
+
+.star5_rating[data-rate="4.3"]:after {
+  width: 86%;
+}
+
+.star5_rating[data-rate="4.2"]:after {
+  width: 84%;
+}
+
+.star5_rating[data-rate="4.1"]:after {
+  width: 82%;
+}
+
+.star5_rating[data-rate="4"]:after {
+  width: 80%;
+}
+
+.star5_rating[data-rate="3.9"]:after {
+  width: 78%;
+}
+
+.star5_rating[data-rate="3.8"]:after {
+  width: 76%;
+}
+
+.star5_rating[data-rate="3.7"]:after {
+  width: 74%;
+}
+
+.star5_rating[data-rate="3.6"]:after {
+  width: 72%;
+}
+
+.star5_rating[data-rate="3.5"]:after {
+  width: 70%;
+}
+
+.star5_rating[data-rate="3.4"]:after {
+  width: 68%;
+}
+
+.star5_rating[data-rate="3.3"]:after {
+  width: 66%;
+}
+
+.star5_rating[data-rate="3.2"]:after {
+  width: 64%;
+}
+
+.star5_rating[data-rate="3.1"]:after {
+  width: 62%;
+}
+
+.star5_rating[data-rate="3"]:after {
+  width: 60%;
+}
+
+.star5_rating[data-rate="2.9"]:after {
+  width: 58%;
+}
+
+.star5_rating[data-rate="2.8"]:after {
+  width: 56%;
+}
+
+.star5_rating[data-rate="2.7"]:after {
+  width: 54%;
+}
+
+.star5_rating[data-rate="2.6"]:after {
+  width: 52%;
+}
+
+.star5_rating[data-rate="2.5"]:after {
+  width: 50%;
+}
+
+.star5_rating[data-rate="2.4"]:after {
+  width: 48%;
+}
+
+.star5_rating[data-rate="2.3"]:after {
+  width: 46%;
+}
+
+.star5_rating[data-rate="2.2"]:after {
+  width: 44%;
+}
+
+.star5_rating[data-rate="2.1"]:after {
+  width: 42%;
+}
+
+.star5_rating[data-rate="2"]:after {
+  width: 40%;
+}
+
+.star5_rating[data-rate="1.9"]:after {
+  width: 38%;
+}
+
+.star5_rating[data-rate="1.8"]:after {
+  width: 36%;
+}
+
+.star5_rating[data-rate="1.7"]:after {
+  width: 34%;
+}
+
+.star5_rating[data-rate="1.6"]:after {
+  width: 32%;
+}
+
+.star5_rating[data-rate="1.5"]:after {
+  width: 30%;
+}
+
+.star5_rating[data-rate="1.4"]:after {
+  width: 28%;
+}
+
+.star5_rating[data-rate="1.3"]:after {
+  width: 26%;
+}
+
+.star5_rating[data-rate="1.2"]:after {
+  width: 24%;
+}
+
+.star5_rating[data-rate="1.1"]:after {
+  width: 22%;
+}
+
+.star5_rating[data-rate="1"]:after {
+  width: 20%;
+}
+
+.star5_rating[data-rate="0.9"]:after {
+  width: 18%;
+}
+
+.star5_rating[data-rate="0.8"]:after {
+  width: 16%;
+}
+
+.star5_rating[data-rate="0.7"]:after {
+  width: 14%;
+}
+
+.star5_rating[data-rate="0.6"]:after {
+  width: 12%;
+}
+
+.star5_rating[data-rate="0.5"]:after {
+  width: 10%;
+}
+
+.star5_rating[data-rate="0.4"]:after {
+  width: 8%;
+}
+
+.star5_rating[data-rate="0.3"]:after {
+  width: 6%;
+}
+
+.star5_rating[data-rate="0.2"]:after {
+  width: 4%;
+}
+
+.star5_rating[data-rate="0.1"]:after {
+  width: 2%;
+}
+
+.star5_rating[data-rate="0"]:after {
+  width: 0%;
+}

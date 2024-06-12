@@ -1,0 +1,25 @@
+.container{
+  max-width: 1500px;
+  margin: 200px auto;
+  text-align: center;
+}
+
+.thanks{
+  margin: 50px auto;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px;
+}
+
+.thanks a{
+  display: inline-block;
+  width: 20%;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(0, 60, 255);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 10px auto;
+}
