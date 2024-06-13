@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\URL;
+// use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        URL::forceScheme('https');
-        
+        // URL::forceScheme('https');
+
         Validator::extend('image_url', function ($attribute, $value, $parameters, $validator) {
             return preg_match('/\.(jpg|jpeg|png)$/i', $value);
         });
