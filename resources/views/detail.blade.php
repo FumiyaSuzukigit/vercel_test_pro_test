@@ -151,7 +151,7 @@
             </div>
         </div>
         @endisset
-        @isset($averageScore)
+        <!-- @isset($averageScore)
             <p class="result-rating-rate">
                 <span>レビュー数
                     @isset($reviewCount)
@@ -186,7 +186,7 @@
                 @endAuth
             </div>
             @endforeach
-        </div>
+        </div> -->
     </div>
 
 <script>
