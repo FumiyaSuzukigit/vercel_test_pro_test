@@ -36,7 +36,7 @@ Route::get('/thanksReserve', function () {return view('/thanksReserve');});
 Route::get('/representativeReserve/{id}',[MyPageController::class,'representativeReserve'])->name('representativeReserve');
 Route::get('/kutikomiAll/{id}',[KutikomiController::class,'kutikomiAll'])->name('kutikomiAll');
 
-Route::middleware(['auth','verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/myPage',[MyPageController::class,'myPage'])->name('myPage');
     Route::get('/recommendationAdd',[MyPageController::class,'recommendationAdd'])->name('recommendationAdd');
     Route::post('/reserveAdd',[ReserveController::class,'reserveAdd'])->name('reserveAdd');
