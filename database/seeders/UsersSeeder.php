@@ -46,8 +46,8 @@ class UsersSeeder extends Seeder
         'created_at' => now(),
     ];DB::table('users')->insert($param);
     $param = [
-        'name' => 'ddd',
-        'email' => 'ddd@ddd',
+        'name' => 'ゲストユーザー',
+        'email' => 'guest@guest',
         'email_verified_at' => now(),
         'password' => bcrypt('123456789'),
         'role' => '1',
