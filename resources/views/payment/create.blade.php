@@ -24,6 +24,8 @@
             <p>引き続き事前決済をお願いします</p>
             <p>{{$reserveData->shop->name}}</p>
             <p>おすすめコース{{$reserveData->hc}}人分、{{$reserveData->hc}},000円</p>
+            <p style="color:red">※テスト決済はカード番号『4242 4242 4242 4242』にて行えます（実際の決済はされません）</p>
+            <p style="color:red">※有効期限は現在以後、セキュリティコードは３桁の数字となります</p>
         </div>
         <div class="credit">
             <div class="credit-area col-6 card">
