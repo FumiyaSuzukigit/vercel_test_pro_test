@@ -89,24 +89,24 @@ class SearchController extends Controller
         // }
 
         if($request->sorting=="avg_low"){
-    $shops = Shop::with('kutikomis')
-        ->leftJoin('kutikomis', function($join) {
-            $join->on('shops.id', '=', 'kutikomis.shop_id')
-                ->whereNull('kutikomis.deleted_at');
-        })
-        ->select('shops.*')
-        ->selectRaw('AVG(kutikomis.score) as kutikomis_avg_score')
-        ->groupBy('shops.id');
+            $shops = Shop::with('kutikomis')
+                ->leftJoin('kutikomis', function($join) {
+                    $join->on('shops.id', '=', 'kutikomis.shop_id')
+                        ->whereNull('kutikomis.deleted_at');
+                })
+                ->select('shops.*')
+                ->selectRaw('AVG(kutikomis.score) as kutikomis_avg_score')
+                ->groupBy('shops.id');
 
-    $shops = DB::table(DB::raw("({$shops->toSql()}) as sub"))
-        ->mergeBindings($shops->getQuery()) // you need to get underlying Query Builder
-        ->orderByRaw('CASE WHEN kutikomis_avg_score IS NULL THEN 1 ELSE 0 END, kutikomis_avg_score ASC')
-        ->get();
+            $shops = DB::table(DB::raw("({$shops->toSql()}) as sub"))
+                ->mergeBindings($shops->getQuery()) // you need to get underlying Query Builder
+                ->orderByRaw('CASE WHEN kutikomis_avg_score IS NULL THEN 1 ELSE 0 END, kutikomis_avg_score ASC')
+                ->get();
 
-    $areas=Shop::select('area')->distinct()->get();
-    $categories=Shop::select('category')->distinct()->get();
-    return view('/index',compact('shops','areas','categories'));
-}
+            $areas=Shop::select('area')->distinct()->get();
+            $categories=Shop::select('category')->distinct()->get();
+            return view('/index',compact('shops','areas','categories'));
+        }
 
 
 
